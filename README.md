@@ -12,6 +12,24 @@ docker compose up -d # get up database
 npm run dev # start server
 ```
 
+## Project creation
+
+```bash
+npm create-next-app # yes to all default options
+```
+
+## Prisma commands
+
+```bash
+npx prisma init
+```
+
+Then, rename the .env.template file to.env and replace the placeholder URL with your database connection details, including the username, password, and database name. For this project, we have:
+
+```bash
+DATABASE_URL="postgresql://postgres:postgres@localhost:5432/postgres"
+```
+
 ## Dependencies
 
 - [Prisma](https://www.prisma.io/docs/orm/overview/introduction/what-is-prisma)
