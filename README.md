@@ -1,26 +1,34 @@
 # Todos App with Nextjs and Postgres
 
-A Simple Todo App for Next.js Practice
+A Simple Todo App for Next.js Practice.
 
 ## Development
 
-After clone, run:
+1. After clone:
 
-```bash
-npm i #install dependencies
-docker compose up -d # get up database
-npm run dev # start server
-```
+   ```bash
+   npm i #install dependencies
+   docker compose up -d # get up database
+   # Update the DATABASE_URL within your .env file.
+   npx prisma migrate dev # Apply schema changes to your database.
+   npx prisma generate # Generate the Prisma Client to reflect schema updates.
+   npm run dev # start server
+   ```
 
-## Project creation
+2. Seed Endpoint for Local Database Reset
+
+   - The `/api/seed` endpoint allows you to easily reset your local database to its initial state with test data.
+   - Access it by clicking [here](http://localhost:3000/api/seed) or sending a GET request to `http://localhost:3000/api/seed`.
+
+## How the Project Was Built
 
 ```bash
 npm create-next-app # yes to all default options
 ```
 
-## Prisma config
+- ### Prisma config
 
-1. Rename the .env.template file to.env and replace the placeholder URL with your database connection details, including the username, password, and database name. For this project, we have:
+1. Copy .env.template file and rename the .env.template.copy file to .env and replace the placeholder URL with your database connection details, including the username, password, and database name. For this project, we have:
 
    ```bash
    DATABASE_URL="postgresql://postgres:postgres@localhost:5432/postgres"
@@ -61,11 +69,7 @@ npm create-next-app # yes to all default options
    if (process.env.NODE_ENV !== 'production') globalThis.prismaGlobal = prisma
    ```
 
-### Seed Local Database
-
-To seed your local database, click [here](http://localhost:3000/api/seed) or send a GET request to `http://localhost:3000/api/seed`.
-
-### Update Prisma After Schema Changes
+#### Update Prisma After Schema Changes
 
 After making changes to your Prisma schema (`schema.prisma`), run the following commands:
 
