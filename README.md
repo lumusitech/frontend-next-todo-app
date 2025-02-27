@@ -78,6 +78,7 @@ npx prisma generate # Generate the Prisma Client to reflect schema updates.
 
 - [Prisma](https://www.prisma.io/docs/orm/overview/introduction/what-is-prisma)
 - [Vercel - Next + Prisma](https://vercel.com/guides/nextjs-prisma-postgres)
+- [Yup](https://www.npmjs.com/package/yup): Yup is a schema builder for runtime value parsing and validation. Define a schema, transform a value to match, assert the shape of an existing value, or both. Yup schema are extremely expressive and allow modeling complex, interdependent validations, or value transformation.
 
 ## Prod
 
