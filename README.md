@@ -20,14 +20,15 @@ npm create-next-app # yes to all default options
 
 ## Prisma commands
 
-```bash
-npx prisma init
-```
-
-Then, rename the .env.template file to.env and replace the placeholder URL with your database connection details, including the username, password, and database name. For this project, we have:
+Rename the .env.template file to.env and replace the placeholder URL with your database connection details, including the username, password, and database name. For this project, we have:
 
 ```bash
 DATABASE_URL="postgresql://postgres:postgres@localhost:5432/postgres"
+```
+
+```bash
+npx prisma init
+npx prisma migrate dev
 ```
 
 ## Dependencies
