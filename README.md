@@ -20,6 +20,8 @@ A Simple Todo App for Next.js Practice.
    - The `/api/seed` endpoint allows you to easily reset your local database to its initial state with test data.
    - Access it by clicking [here](http://localhost:3000/api/seed) or sending a GET request to `http://localhost:3000/api/seed`.
 
+Important Note: You can use `npx prisma db pull` to automatically generate Prisma schema models for tables already present in your database that are not yet defined in your schema. For more information about other Prisma commands, visit [https://www.prisma.io/docs/orm/reference/prisma-cli-reference](https://www.prisma.io/docs/orm/reference/prisma-cli-reference). Remember to update your Prisma client after using `npx prisma db pull` with `npx prisma generate` to access the new schemas (automatic synchronization of new tables with Prisma).
+
 ## How the Project Was Built
 
 ```bash
