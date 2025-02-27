@@ -28,8 +28,15 @@ DATABASE_URL="postgresql://postgres:postgres@localhost:5432/postgres"
 
 ```bash
 npx prisma init
-npx prisma migrate dev
 ```
+
+### Update Prisma After Schema Changes
+
+After making changes to your Prisma schema (`schema.prisma`), run the following commands:
+
+```bash
+npx prisma migrate dev # Apply schema changes to your database.
+npx prisma generate # Generate the Prisma Client to reflect schema updates.
 
 ## Dependencies
 
@@ -39,3 +46,4 @@ npx prisma migrate dev
 ## Prod
 
 ## Stage
+```
