@@ -26,7 +26,7 @@ A Simple Todo App for Next.js Practice.
 npm create-next-app # yes to all default options
 ```
 
-- ### Prisma config
+### Prisma config
 
 1. Copy .env.template file and rename the .env.template.copy file to .env and replace the placeholder URL with your database connection details, including the username, password, and database name. For this project, we have:
 
