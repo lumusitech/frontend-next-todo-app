@@ -7,9 +7,9 @@ A Simple Todo App for Next.js Practice.
 1. After clone:
 
    ```bash
+   # Update the DATABASE_URL within your .env file.
    npm i #install dependencies
    docker compose up -d # get up database
-   # Update the DATABASE_URL within your .env file.
    npx prisma migrate dev # Apply schema changes to your database.
    npx prisma generate # Generate the Prisma Client to reflect schema updates.
    npm run dev # start server
