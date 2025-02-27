@@ -61,6 +61,10 @@ npm create-next-app # yes to all default options
    if (process.env.NODE_ENV !== 'production') globalThis.prismaGlobal = prisma
    ```
 
+### Seed Local Database
+
+To seed your local database, click [here](http://localhost:3000/api/seed) or send a GET request to `http://localhost:3000/api/seed`.
+
 ### Update Prisma After Schema Changes
 
 After making changes to your Prisma schema (`schema.prisma`), run the following commands:
