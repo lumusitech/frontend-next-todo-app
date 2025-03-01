@@ -1,27 +1,31 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { JSX } from 'react'
+import React from 'react'
 import { CiLogout } from 'react-icons/ci'
-import { LiaSitemapSolid } from 'react-icons/lia'
-import { MdOutlineDashboard } from 'react-icons/md'
+import { IoCalendarOutline, IoCheckboxOutline, IoListOutline } from 'react-icons/io5'
 import { SidebarItem } from './SidebarItem'
 
 interface Item {
   title: string
-  icon: JSX.Element
+  icon: React.ReactNode
   href: string
 }
 
 const items: Item[] = [
   {
     title: 'Dashboard',
-    icon: <MdOutlineDashboard />,
+    icon: <IoCalendarOutline />,
     href: '/dashboard',
   },
   {
-    title: 'Categories',
-    icon: <LiaSitemapSolid />,
-    href: '/',
+    title: 'Rest Todos',
+    icon: <IoCheckboxOutline />,
+    href: '/dashboard/rest-todos',
+  },
+  {
+    title: 'Server Actions',
+    icon: <IoListOutline />,
+    href: '/dashboard/server-todos',
   },
 ]
 
@@ -56,7 +60,7 @@ export const Sidebar = () => {
 
         <ul className='space-y-2 tracking-wide mt-8'>
           {items.map(({ href, icon, title }) => (
-            <SidebarItem key={title} href={href} title={title} icon={icon} />
+            <SidebarItem key={href} href={href} title={title} icon={icon} />
           ))}
         </ul>
       </div>
