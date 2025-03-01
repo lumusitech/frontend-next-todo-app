@@ -1,7 +1,12 @@
+import { WidgetItem } from '@/components/WidgetItem'
+
 export default function DashboardPage() {
   return (
-    <div>
-      <h1 className='text-5xl'>Dashboard</h1>
-    </div>
+    <>
+      <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
+        {/* TODO: Posibly replace with widgetsGrid component */}
+        <WidgetItem />
+      </div>
+    </>
   )
 }
