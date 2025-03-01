@@ -41,6 +41,7 @@ export const Sidebar = () => {
               height={100}
               className='w-16 h-16'
               alt='logo'
+              priority
             />
           </Link>
           <span className='text-4xl font-bold text-cyan-600'>Todos App</span>
@@ -53,6 +54,7 @@ export const Sidebar = () => {
             height={200}
             alt=''
             className='w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28'
+            priority
           />
           <h5 className='hidden mt-4 text-xl font-semibold text-gray-600 lg:block'>Fake User</h5>
           <span className='hidden text-gray-400 lg:block'>Admin</span>
