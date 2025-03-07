@@ -1,30 +1,30 @@
 'use client'
 
-import * as todosApi from '@/todos/helpers/todos'
-import { useRouter } from 'next/navigation'
+// import * as todosApi from '@/todos/helpers/todos'
+// import { useRouter } from 'next/navigation'
 import { FormEvent, useState } from 'react'
 import { IoTrashOutline } from 'react-icons/io5'
+import { addTodo } from '../actions/todo-action'
 
 export const NewTodo = () => {
   const [description, setDescription] = useState('')
 
-  const router = useRouter()
+  // const router = useRouter()
 
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault()
 
     if (description.trim().length === 0) return
 
-    await todosApi.createTodo(description)
-
-    router.refresh()
+    // await todosApi.createTodo(description)
+    await addTodo(description)
 
     setDescription('')
   }
 
   const deleteAllCompleted = async () => {
-    await todosApi.deleteCompleted()
-    router.refresh()
+    // await todosApi.deleteCompleted()
+    // router.refresh()
   }
 
   return (

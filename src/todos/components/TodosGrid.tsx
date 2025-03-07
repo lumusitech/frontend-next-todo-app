@@ -1,8 +1,8 @@
 'use client'
 
-import * as api from '@/todos/helpers/todos'
 import { Todo } from '@prisma/client'
 import { useRouter } from 'next/navigation'
+import { toggleTodo } from '../actions/todo-action'
 import { TodoItem } from './TodoItem'
 
 interface Props {
@@ -12,11 +12,12 @@ interface Props {
 export const TodosGrid = ({ todos = [] }: Props) => {
   const router = useRouter()
 
-  const toggleTodo = async (id: string, completed: boolean) => {
-    await api.updateTodo(id, completed)
+  //? withouth the server actions, we need to use the api to update the todo
+  // const toggleTodo = async (id: string, completed: boolean) => {
+  //   await api.updateTodo(id, completed)
 
-    router.refresh()
-  }
+  //   router.refresh()
+  // }
 
   return (
     <div className='grid grid-cols-1 gap-2 sm:grid-cols-3 '>
