@@ -4,7 +4,7 @@
 // import { useRouter } from 'next/navigation'
 import { FormEvent, useState } from 'react'
 import { IoTrashOutline } from 'react-icons/io5'
-import { addTodo } from '../actions/todo-action'
+import { addTodo, deleteCompleted } from '../actions/todo-action'
 
 export const NewTodo = () => {
   const [description, setDescription] = useState('')
@@ -22,10 +22,10 @@ export const NewTodo = () => {
     setDescription('')
   }
 
-  const deleteAllCompleted = async () => {
-    // await todosApi.deleteCompleted()
-    // router.refresh()
-  }
+  // const deleteAllCompleted = async () => {
+  //   // await todosApi.deleteCompleted()
+  //   // router.refresh()
+  // }
 
   return (
     <form className='flex w-full' onSubmit={onSubmit}>
@@ -48,7 +48,7 @@ export const NewTodo = () => {
       <span className='flex flex-1'></span>
 
       <button
-        onClick={() => deleteAllCompleted()}
+        onClick={deleteCompleted}
         type='button'
         className='gap-2 flex items-center justify-center rounded ml-2 bg-red-400 p-2 text-white hover:bg-red-700 transition-all'
       >

@@ -1,6 +1,7 @@
 # Todos App with Nextjs and Postgres
 
 A Simple Todo App for Next.js Practice.
+**Themes:** Building REST endpoints vs. using Server Actions, implementing optimistic updates with useOptimistic, revalidation and cache management, server cookies vs client cookies, User authentication, and others.
 
 ## Development
 

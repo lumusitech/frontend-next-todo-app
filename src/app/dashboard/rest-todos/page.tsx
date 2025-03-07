@@ -1,3 +1,7 @@
+// only can be used in pages, layouts, and router handlers, not in components
+export const dynamic = 'force-dynamic' // force revalidation every request
+export const revalidate = 0 // revalidate every 0 seconds, it's meaning no cache
+
 import prisma from '@/lib/prisma'
 import { NewTodo, TodosGrid } from '@/todos'
 

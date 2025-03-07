@@ -4,7 +4,14 @@ import prisma from '@/lib/prisma'
 import { Todo } from '@prisma/client'
 import { revalidatePath } from 'next/cache'
 
+export const sleep = async (ms: number): Promise<boolean> => {
+  return new Promise(resolve => {
+    setTimeout(() => resolve(true), ms)
+  })
+}
 export const toggleTodo = async (id: string, completed: boolean): Promise<Todo> => {
+  await sleep(3000)
+
   const todo = await prisma.todo.findFirst({
     where: {
       id,
@@ -38,4 +45,14 @@ export const addTodo = async (description: string) => {
       message: `Error creating todo - ${error}`,
     }
   }
+}
+
+export const deleteCompleted = async (): Promise<void> => {
+  await prisma.todo.deleteMany({
+    where: {
+      completed: true,
+    },
+  })
+
+  revalidatePath('/dashboard/server-todos')
 }
