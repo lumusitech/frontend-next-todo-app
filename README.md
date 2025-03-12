@@ -35,17 +35,7 @@ Intallation:
 npm install react-icons --save
 ```
 
-### Components from [TW components](https://www.creative-tim.com/twcomponents)
-
-- #### [Sidebar component](https://www.creative-tim.com/twcomponents/component/dashboard-navigation)
-
-- #### [Card component](https://www.creative-tim.com/twcomponents/component/user-card-7)
-
-- #### [Pokemon page](https://www.creative-tim.com/twcomponents/component/profile-information-card-horizon-ui-tailwind)
-
-- #### [404 page](https://www.creative-tim.com/twcomponents/component/404-page-not-found)
-
-- #### [Error page component](https://www.creative-tim.com/twcomponents/component/tailwind-css-500-server-error-illustration)
+### Adapted Components from [TW components](https://www.creative-tim.com/twcomponents)
 
 ### Note: Tailwind CSS Configuration
 
