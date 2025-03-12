@@ -5,7 +5,7 @@ import { useState } from 'react'
 // https://tailwindcomponents.com/component/radio-buttons-1
 
 interface Props {
-  currentOption?: number
+  currentTab?: number
   tabsOptions?: number[]
 }
 
