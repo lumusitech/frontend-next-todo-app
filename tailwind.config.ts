@@ -17,6 +17,7 @@ export default {
   },
   safelist: [
     {
+      // Ensure dynamically generated grid-cols classes are not purged
       pattern: /grid-cols-./,
     },
   ],
