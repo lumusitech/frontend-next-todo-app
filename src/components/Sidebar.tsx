@@ -4,6 +4,7 @@ import React from 'react'
 import { CiLogout } from 'react-icons/ci'
 import {
   IoAtCircleOutline,
+  IoBasketOutline,
   IoCalendarOutline,
   IoCheckboxOutline,
   IoListOutline,
@@ -36,6 +37,11 @@ const items: Item[] = [
     title: 'Cookies',
     icon: <IoAtCircleOutline />,
     href: '/dashboard/cookies',
+  },
+  {
+    title: 'Products',
+    icon: <IoBasketOutline />,
+    href: '/dashboard/products',
   },
 ]
 
