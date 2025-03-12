@@ -23,6 +23,63 @@ A Simple Todo App for Next.js Practice.
 
 Important Note: You can use `npx prisma db pull` to automatically generate Prisma schema models for tables already present in your database that are not yet defined in your schema. For more information about other Prisma commands, visit [https://www.prisma.io/docs/orm/reference/prisma-cli-reference](https://www.prisma.io/docs/orm/reference/prisma-cli-reference). Remember to update your Prisma client after using `npx prisma db pull` with `npx prisma generate` to access the new schemas (automatic synchronization of new tables with Prisma).
 
+## UI
+
+### Icons
+
+In this projects, we use React Icons. Learn more [here](https://react-icons.github.io/react-icons/)
+
+Intallation:
+
+```bash
+npm install react-icons --save
+```
+
+### Components from [TW components](https://www.creative-tim.com/twcomponents)
+
+- #### [Sidebar component](https://www.creative-tim.com/twcomponents/component/dashboard-navigation)
+
+- #### [Card component](https://www.creative-tim.com/twcomponents/component/user-card-7)
+
+- #### [Pokemon page](https://www.creative-tim.com/twcomponents/component/profile-information-card-horizon-ui-tailwind)
+
+- #### [404 page](https://www.creative-tim.com/twcomponents/component/404-page-not-found)
+
+- #### [Error page component](https://www.creative-tim.com/twcomponents/component/tailwind-css-500-server-error-illustration)
+
+### Note: Tailwind CSS Configuration
+
+Ensure that the paths to all files using Tailwind styles are included in the tailwind.config.ts file. In this project, the todos and components folders have been added.
+Furthermore, add a safelist array to ensure that dynamically generated Tailwind classes like grid-cols-${tabsOptions.length} are not purged during the build process.
+
+```typescript
+import type { Config } from 'tailwindcss'
+
+export default {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/todos/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+      },
+    },
+  },
+  safelist: [
+    {
+      // Ensure dynamically generated grid-cols classes are not purged
+      pattern: /grid-cols-./,
+    },
+  ],
+  plugins: [],
+} satisfies Config
+```
+
 ## How the Project Was Built
 
 ```bash
