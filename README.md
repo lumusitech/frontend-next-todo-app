@@ -128,6 +128,11 @@ npx prisma migrate dev # Apply schema changes to your database.
 npx prisma generate # Generate the Prisma Client to reflect schema updates.
 ```
 
+## Next Cookie Management
+
+Next.js provides the `cookies()` function for reading incoming HTTP request cookies in Server Components and managing outgoing request cookies in Server Actions or Route Handlers. Read more [here](https://nextjs.org/docs/app/api-reference/functions/cookies).
+To simplify cookie management in this project, we utilize the `cookies-next` library.
+
 ## Dependencies
 
 - [Prisma](https://www.prisma.io/docs/orm/overview/introduction/what-is-prisma)
