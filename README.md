@@ -39,7 +39,7 @@ npm install react-icons --save
 
 ### Note: Tailwind CSS Configuration
 
-Ensure that the paths to all files using Tailwind styles are included in the tailwind.config.ts file. In this project, the todos and components folders have been added.
+Ensure that the paths to all files using Tailwind styles are included in the tailwind.config.ts file. In this project, the todos and products folders have been added.
 Furthermore, add a safelist array to ensure that dynamically generated Tailwind classes like grid-cols-${tabsOptions.length} are not purged during the build process.
 
 ```typescript
@@ -51,6 +51,7 @@ export default {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/todos/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/products/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
