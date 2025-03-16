@@ -77,6 +77,8 @@ This project uses Auth.js as authentication and authorization management. Auth.j
 
 We can generate hash key for `NEXTAUTH_SECRET` env var using this [page](https://generate-secret.vercel.app/32).
 
+To generate GITHUB_ID and GITHUB_SECRET you have to go to github settings, then Developers settings, then OAuth Apps and generate a new OAuth app. Remember add a callback page. In development mode, use `http://localhost:3000/api/auth/callback/github`. In production mode, use `https://yourdomain.com/api/auth/callback/github`
+
 ## How the Project Was Built
 
 ```bash
