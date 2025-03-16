@@ -2,8 +2,8 @@ import { TabBar } from '@/components'
 import { cookies } from 'next/headers'
 
 export const metadata = {
-  title: 'Cookies page',
-  description: 'Cookies page',
+  title: 'Cookies Page',
+  description: 'Cookies Page',
 }
 
 export default async function CookiesPage() {

@@ -5,6 +5,11 @@ export const revalidate = 0 // revalidate every 0 seconds, it's meaning no cache
 import prisma from '@/lib/prisma'
 import { NewTodo, TodosGrid } from '@/todos'
 
+export const metadata = {
+  title: 'REST Todos Page',
+  description: 'REST Todos Page',
+}
+
 export default async function RestTodosPage() {
   const todos = await prisma.todo.findMany({ orderBy: { description: 'asc' } })
 
