@@ -75,6 +75,8 @@ export default {
 
 This project uses Auth.js as authentication and authorization management. Auth.js is a complete open-source authentication solution for Web applications. It is designed from the ground up to support Next.js and Serverless. More info [here](https://next-auth.js.org/getting-started/introduction).
 
+We can generate hash key for `NEXTAUTH_SECRET` env var using this [page](https://generate-secret.vercel.app/32).
+
 ## How the Project Was Built
 
 ```bash
