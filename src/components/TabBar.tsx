@@ -1,6 +1,7 @@
 'use client'
 
 import { setCookie } from 'cookies-next'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 interface Props {
@@ -9,11 +10,13 @@ interface Props {
 }
 
 export const TabBar = ({ tabsOptions = [1, 2, 3, 4], currentTab = 1 }: Props) => {
+  const router = useRouter()
   const [selected, setSelected] = useState(currentTab)
 
   const onTabSelected = (tab: number) => {
     setSelected(tab)
     setCookie('selectedTab', String(tab))
+    router.refresh()
   }
 
   return (
