@@ -1,5 +1,6 @@
 // 'use client'
 
+import { products } from '@/products'
 import { getCookie, hasCookie, setCookie } from 'cookies-next'
 
 /* 
@@ -34,5 +35,21 @@ export const addProductToCart = (id: string) => {
 export const removeProductFromCart = (id: string) => {
   const cookieCart = getCookieCart()
   delete cookieCart[id]
+  setCookie('cart', JSON.stringify(cookieCart))
+}
+
+export const removeSingleProductFromCart = (id: string) => {
+  const cookieCart = getCookieCart()
+  if (!cookieCart[id]) return
+
+  const product = products.find(product => product.id === id)
+  if (!product) return
+
+  if (cookieCart[id] > 1) {
+    cookieCart[id] -= 1
+  } else {
+    delete cookieCart[id]
+  }
+
   setCookie('cart', JSON.stringify(cookieCart))
 }
