@@ -1,6 +1,6 @@
-# Todos App with Nextjs and Postgres
+# Dashboard App with Nextjs and Postgres
 
-A Simple Todo App for Next.js Practice.
+A Simple Dashboard App for Next.js Practice.
 **Themes:** Building REST endpoints vs. using Server Actions, implementing optimistic updates with useOptimistic, revalidation and cache management, server cookies vs client cookies, User authentication, and others.
 
 ## Development
@@ -71,6 +71,10 @@ export default {
 } satisfies Config
 ```
 
+## Authentication and Authorization
+
+This project uses Auth.js as authentication and authorization management. Auth.js is a complete open-source authentication solution for Web applications. It is designed from the ground up to support Next.js and Serverless. More info [here](https://next-auth.js.org/getting-started/introduction).
+
 ## How the Project Was Built
 
 ```bash
@@ -140,6 +144,7 @@ To simplify cookie management in this project, we utilize the `cookies-next` lib
 - [Vercel - Next + Prisma](https://vercel.com/guides/nextjs-prisma-postgres)
 - [Yup](https://www.npmjs.com/package/yup): Yup is a schema builder for runtime value parsing and validation. Define a schema, transform a value to match, assert the shape of an existing value, or both. Yup schema are extremely expressive and allow modeling complex, interdependent validations, or value transformation.
 - [Cookies Next](https://www.npmjs.com/package/cookies-next): A versatile cookie management library for Next.js applications, supporting both client-side and server-side operations.
+- [Next Auth](https://next-auth.js.org/): NextAuth.js/Auth.js is a complete open-source authentication solution for Web applications.
 
 ## Prod
 
