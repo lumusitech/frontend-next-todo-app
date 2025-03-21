@@ -149,7 +149,7 @@ To simplify cookie management in this project, we utilize the `cookies-next` lib
 - [Yup](https://www.npmjs.com/package/yup): Yup is a schema builder for runtime value parsing and validation. Define a schema, transform a value to match, assert the shape of an existing value, or both. Yup schema are extremely expressive and allow modeling complex, interdependent validations, or value transformation.
 - [Cookies Next](https://www.npmjs.com/package/cookies-next): A versatile cookie management library for Next.js applications, supporting both client-side and server-side operations.
 - [Next Auth](https://next-auth.js.org/): NextAuth.js/Auth.js is a complete open-source authentication solution for Web applications.
-- [Auth Prisma Adapter](https://next-auth.js.org/v3/adapters/prisma)
+- [Auth Prisma Adapter](https://next-auth.js.org/v3/adapters/prisma): Follow the guide to implement next auth adapter for prisma.
 
 ## Prod
 
